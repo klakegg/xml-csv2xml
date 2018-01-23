@@ -58,6 +58,7 @@ public class Main {
             XMLStreamWriter xmlStreamWriter = XMLOutputFactory.newFactory().createXMLStreamWriter(outputStream);
             xmlStreamWriter.writeStartDocument("UTF-8", "1.0");
             xmlStreamWriter.writeStartElement("", "CsvFile", "urn:fdc:klakegg.net:2018:xml:csv2xml:CsvFile-1");
+            xmlStreamWriter.writeNamespace("", "urn:fdc:klakegg.net:2018:xml:csv2xml:CsvFile-1");
 
             // Open CSV for reading
             CsvReader csvReader = new CsvReader(inputStream, StandardCharsets.UTF_8);
